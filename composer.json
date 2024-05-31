@@ -3,7 +3,7 @@
     "type": "october-theme",
     "description": "Basic theme for October",
     "require": {
-        "composer/installers": "~1.0"
+        "composer/installers": "dev-main"
     },
     "license": "MIT"
 }
