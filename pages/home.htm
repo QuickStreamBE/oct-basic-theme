@@ -1,9 +1,12 @@
-title = "Home"
-layout = "default"
 url = "/"
+layout = "default"
+title = "Home"
 ==
-{% partial 'home/banner' %}
-{% partial 'home/references' %}
-{% partial 'home/about' %}
-{% partial 'home/what-we-do' %}
-{% partial 'home/cta-banner' %}
+<section class="wrapper !bg-[#ffffff]">
+    <div class="container">
+        {% partial 'home/banner' %}
+        {% partial 'home/references' %}
+        {% partial 'home/about' %}
+        {% partial 'home/what-we-do' %}
+    </div>
+</section>
