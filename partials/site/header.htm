@@ -2,8 +2,8 @@
     <nav class="navbar navbar-expand-lg classic transparent navbar-light">
         <div class="container xl:flex-row lg:flex-row !flex-nowrap items-center">
             <div class="navbar-brand w-full">
-                <a href="{{'home'|page}}">
-                    <img src="{{'assets/images/logo-dark.png'|theme|resize(150)}}" alt="image">
+                <a href="{{'home'|page}}" class="xl:text-[1.5rem] !text-[calc(1.275rem_+_0.3vw)] !mb-0 text-[#343f52]">
+                    SeeYouResto
                 </a>
             </div>
             <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
@@ -79,6 +79,14 @@
                     <li class="nav-item hidden xl:block lg:block md:block">
                         <a href="{{'contact'|page}}"
                            class="btn btn-sm btn-aqua text-white !bg-[#54a8c7] border-[#54a8c7] hover:text-white hover:bg-[#54a8c7] hover:border-[#54a8c7] focus:shadow-[rgba(79,152,181,1)] active:text-white active:bg-[#54a8c7] active:border-[#54a8c7] disabled:text-white disabled:bg-[#54a8c7] disabled:border-[#54a8c7] !rounded-[50rem]">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown language-select uppercase group">
+                        <a class="nav-link dropdown-item dropdown-toggle  hover:!text-[#54a8c7] after:!text-[#54a8c7]" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NL</a>
+                        <ul class="dropdown-menu group-hover:shadow-[0_0.25rem_0.75rem_rgba(30,34,40,0.15)]">
+                            <li class="nav-item"><a class="dropdown-item hover:!text-[#54a8c7] hover:bg-[inherit] focus:text-[#3f78e0] focus:bg-[inherit]" href="#">NL</a></li>
+                            <li class="nav-item"><a class="dropdown-item hover:!text-[#54a8c7] hover:bg-[inherit] focus:text-[#3f78e0] focus:bg-[inherit]" href="#">FR</a></li>
+                            <li class="nav-item"><a class="dropdown-item hover:!text-[#54a8c7] hover:bg-[inherit] focus:text-[#3f78e0] focus:bg-[inherit]" href="#">EN</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item xl:hidden lg:hidden">
                         <button class="hamburger offcanvas-nav-btn"><span></span></button>
