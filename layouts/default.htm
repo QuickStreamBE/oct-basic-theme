@@ -3,7 +3,7 @@
 <html>
 <head>
     {% partial 'site/head/head-meta' %}
-    <title>October CMS - {{ this.page.meta_title ?: placeholder('pageTitle') }}</title>
+    <title>SeeYouResto - {{ this.page.meta_title ?: placeholder('pageTitle') }}</title>
     <meta name="description" content="{{ this.page.meta_description }}">
     <meta name="title" content="{{ this.page.meta_title }}">
     {% partial 'site/head/head-links' %}
@@ -16,7 +16,6 @@
     {% page %}
 </div>
 {% partial 'site/footer' %}
-<script src="{{ 'assets/js/plugins.js'|theme }}"></script>
-<script src="{{ 'assets/js/theme.js'|theme }}"></script>
+{% partial 'site/footer-scripts' %}
 </body>
 </html>
