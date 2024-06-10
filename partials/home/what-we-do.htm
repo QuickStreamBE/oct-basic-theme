@@ -6,8 +6,8 @@ handle = "Category"
         <div class="lg:w-9/12 xl:w-8/12 xxl:w-7/12 w-full flex-[0_0_auto] px-[15px] max-w-full">
             <h2
                 class="text-[0.8rem] uppercase inline-flex !leading-[1.35] text-line relative align-top pl-[1.4rem] tracking-[0.02rem] before:content-[''] before:absolute before:inline-block before:translate-y-[-60%] before:w-3 before:h-[0.05rem] before:left-0 before:top-2/4 before:bg-[#54a8c7]  text-[#54a8c7]  !mb-3">
-                 Onze oplossingen</h2>
-            <h3 class="text-[calc(1.315rem_+_0.78vw)] font-bold xl:text-[1.9rem] !leading-[1.25] mb-9">Efficiënte bestellingen en nauwkeurige foodcostberekening.</h3>
+                {{ 'home.what-we-do.title'|_ }}</h2>
+            <h3 class="text-[calc(1.315rem_+_0.78vw)] font-bold xl:text-[1.9rem] !leading-[1.25] mb-9">{{ 'home.what-we-do.subtitle'|_ }}</h3>
         </div>
         <!-- /column -->
     </div>
@@ -21,7 +21,7 @@ handle = "Category"
                 class="uil uil-shield-exclamation before:content-['\ecb3']"></i> </div>
             <h4 class="!text-[1rem] !leading-[1.45]">{{category.title}}</h4>
             <p class="!mb-3">{{category.summary_text}}</p>
-            <a href="{{'category-item'|page({slug: category.slug})}}" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">Lees meer</a>
+            <a href="{{'category-item'|page({slug: category.slug})}}" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">{{'read-more'|_}}</a>
         </div>
         {% endfor %}
     </div>

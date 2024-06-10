@@ -1,3 +1,6 @@
+[collection categories]
+handle = "Category"
+==
 {% partial 'home/cta-banner' %}
 <footer class="!bg-[#ffffff] ">
     <div class="container pt-[4.5rem] xl:pt-[7rem] lg:pt-[7rem] md:pt-[7rem] pb-[1.75rem]">
@@ -5,46 +8,52 @@
             <div class="xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] px-[15px] max-w-full">
                 <div class="widget">
                     <h3 class="h2 !mb-[.75rem] xl:text-[1.3rem] text-[calc(1.255rem_+_0.06vw)] !leading-[1.35]">
-                        <img src="{{'assets/images/seeyouresto-logo.svg'|theme}}" alt="logo" style="width: 100px" class="py-1">
+                        <img src="{{'assets/images/seeyouresto-logo.svg'|theme}}" alt="logo" style="width: 100px"
+                             class="py-1">
                     </h3>
-                    <p class="lead !text-[0.9rem] leading-[1.65] font-medium mb-5">Beheer eenvoudig al uw bestellingen en houd grip op de foodcost met SeeYouResto – dé oplossing voor uw restaurant.</p>
+                    <p class="lead !text-[0.9rem] leading-[1.65] font-medium mb-5">{{ 'home.banner.subtitle'|_ }}</p>
                 </div>
                 <!-- /.widget -->
             </div>
             <!-- /column -->
-            <div class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full lg:!ml-[16.66666667%] xl:!ml-[16.66666667%] mt-[30px] xl:mt-0 lg:mt-0">
+            <div
+                class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full lg:!ml-[16.66666667%] xl:!ml-[16.66666667%] mt-[30px] xl:mt-0 lg:mt-0">
                 <div class="widget">
-                    <h4 class="widget-title !mb-[.75rem] !text-[.95rem] !leading-[1.45]">Navigeer</h4>
+                    <h4 class="widget-title !mb-[.75rem] !text-[.95rem] !leading-[1.45]">{{ 'Navigeer'|_ }}</h4>
                     <ul class="pl-0 list-none text-inherit  !mb-0">
-                        <li><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Voor wie?</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Voordelen</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Contact</a></li>
+                        <li><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">{{ 'Voor wie'|_ }}?</a></li>
+                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]"
+                                                    href="{{'advantages'|page}}">{{ 'Voordelen'|_ }}</a></li>
+                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]"
+                                                    href="{{'contact'|page}}">{{ 'Contact'|_ }}</a></li>
                     </ul>
                 </div>
                 <!-- /.widget -->
             </div>
             <!-- /column -->
-            <div class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full mt-[30px] xl:mt-0 lg:mt-0">
+            <div
+                class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full mt-[30px] xl:mt-0 lg:mt-0">
                 <div class="widget">
-                    <h4 class="widget-title !mb-[.75rem] !text-[.95rem] !leading-[1.45]">Onze oplossingen</h4>
+                    <h4 class="widget-title !mb-[.75rem] !text-[.95rem] !leading-[1.45]">{{ 'Onze oplossingen'|_ }}</h4>
                     <ul class="pl-0 list-none text-inherit  !mb-0">
-                        <li><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Inventarisbeheer</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Bestellingen</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Foodcost</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">HACCP</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">HR-module</a></li>
+                        {% for category in categories %}
+                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]"
+                                                    href="{{'category-item'|page({'slug': category.slug})}}">{{category.title}}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <!-- /.widget -->
             </div>
             <!-- /column -->
-            <div class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full mt-[30px] xl:mt-0 lg:mt-0">
+            <div
+                class="md:w-4/12 lg:w-2/12 xl:w-2/12 w-full flex-[0_0_auto] px-[15px] max-w-full mt-[30px] xl:mt-0 lg:mt-0">
                 <div class="widget">
-                    <h4 class="widget-title !mb-[.75rem] !text-[.95rem] !leading-[1.45]">Wettelijk</h4>
+                    <h4 class="widget-title !mb-[.75rem] !text-[.95rem] !leading-[1.45]">{{ 'Wettelijk'|_ }}</h4>
                     <ul class="pl-0 list-none text-inherit  !mb-0">
-                        <li><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Privacybeleid</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Cookiebeleid</a></li>
-                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]" href="#">Cookie instellingen</a></li>
+                        <li><a class="text-[#60697b] hover:text-[#54a8c7]" href="{{ 'privacy-policy'|page}}">{{ 'Privacybeleid'|_ }}</a></li>
+                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]"
+                                                    href="{{'cookie-policy'|page}}">{{'Cookiebeleid'|_}}</a></li>
+                        <li class="mt-[0.35rem]"><a class="text-[#60697b] hover:text-[#54a8c7]"  data-cc="show-preferencesModal" href="#" onclick="return false;">{{'Cookie instellingen'|_}}</a></li>
                     </ul>
                 </div>
                 <!-- /.widget -->
@@ -56,8 +65,10 @@
         <div class="xl:flex lg:flex md:flex items-center justify-between">
             <p class="mb-2 xl:!mb-0 lg:!mb-0">© 2024 SeeYouResto. All rights reserved.</p>
             <nav class="nav social   xl:!text-right lg:!text-right md:!text-right">
-                <a class="m-[0_0_0_.7rem] sm:m-[0_.7rem_0_0] xsm:m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-twitter before:content-['\ed59'] text-[1rem] text-[#5daed5]"></i></a>
-                <a class="m-[0_0_0_.7rem] sm:m-[0_.7rem_0_0] xsm:m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]" href="#"><i class="uil uil-facebook-f before:content-['\eae2'] text-[1rem] text-[#4470cf]"></i></a>
+                <a class="m-[0_0_0_.7rem] sm:m-[0_.7rem_0_0] xsm:m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
+                   href="#"><i class="uil uil-twitter before:content-['\ed59'] text-[1rem] text-[#5daed5]"></i></a>
+                <a class="m-[0_0_0_.7rem] sm:m-[0_.7rem_0_0] xsm:m-[0_.7rem_0_0] text-[1rem] transition-all duration-[0.2s] ease-in-out translate-y-0 hover:translate-y-[-0.15rem]"
+                   href="#"><i class="uil uil-facebook-f before:content-['\eae2'] text-[1rem] text-[#4470cf]"></i></a>
             </nav>
             <!-- /.social -->
         </div>
@@ -66,8 +77,11 @@
     <!-- /.container -->
 </footer>
 <!-- progress wrapper -->
-<div class="progress-wrap fixed w-[2.3rem] h-[2.3rem] cursor-pointer block shadow-[inset_0_0_0_0.1rem_rgba(128,130,134,0.25)] z-[1010] opacity-0 invisible translate-y-3 transition-all duration-[0.2s] ease-[linear,margin-right] delay-[0s] rounded-[100%] right-6 bottom-6 motion-reduce:transition-none after:absolute after:content-['\e951'] after:text-center after:leading-[2.3rem] after:text-[1.2rem] after:text-[#54a8c7] after:h-[2.3rem] after:w-[2.3rem] after:cursor-pointer after:block after:z-[1] after:transition-all after:duration-[0.2s] after:ease-linear after:left-0 after:top-0 motion-reduce:after:transition-none after:font-Unicons">
+<div
+    class="progress-wrap fixed w-[2.3rem] h-[2.3rem] cursor-pointer block shadow-[inset_0_0_0_0.1rem_rgba(128,130,134,0.25)] z-[1010] opacity-0 invisible translate-y-3 transition-all duration-[0.2s] ease-[linear,margin-right] delay-[0s] rounded-[100%] right-6 bottom-6 motion-reduce:transition-none after:absolute after:content-['\e951'] after:text-center after:leading-[2.3rem] after:text-[1.2rem] after:text-[#54a8c7] after:h-[2.3rem] after:w-[2.3rem] after:cursor-pointer after:block after:z-[1] after:transition-all after:duration-[0.2s] after:ease-linear after:left-0 after:top-0 motion-reduce:after:transition-none after:font-Unicons">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path class="fill-none stroke-[#54a8c7] stroke-[4] box-border transition-all duration-[0.2s] ease-linear motion-reduce:transition-none" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        <path
+            class="fill-none stroke-[#54a8c7] stroke-[4] box-border transition-all duration-[0.2s] ease-linear motion-reduce:transition-none"
+            d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
     </svg>
 </div>

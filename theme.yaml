@@ -6,3 +6,7 @@ authorCode: 'Quickstream'
 code: 'octobercms-basic'
 parent: ''
 database: '0'
+translate:
+    nl: config/lang-nl.yaml
+    fr: config/lang-fr.yaml
+    en: config/lang-en.yaml
