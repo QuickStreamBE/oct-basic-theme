@@ -23380,6 +23380,22 @@ blockquote.video-wrapper .video-content.icon-top:before {
   .xl\:text-\[2rem\] {
     font-size: 2rem;
   }
+
+  .xl\:text-\[1\.7rem\] {
+    font-size: 1.7rem;
+  }
+
+  .xl\:text-\[1\.6rem\] {
+    font-size: 1.6rem;
+  }
+
+  .xl\:text-\[30px\] {
+    font-size: 30px;
+  }
+
+  .xl\:text-\[40px\] {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1400px) {
