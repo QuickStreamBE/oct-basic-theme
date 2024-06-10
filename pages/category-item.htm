@@ -20,7 +20,7 @@ value = "{{ :slug }}"
             <!-- /column -->
         </div>
         {% for advantage in section.advantages %}
-        {% partial 'category/advantage' section=advantage %}
+        {% partial 'category/advantage' section=advantage loop=loop %}
         {% endfor %}
     </div>
 </section>
