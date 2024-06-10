@@ -1,30 +1,15 @@
+[collection references]
+handle = "References"
+==
+{% if(references.count()) %}
 <h2 class="!text-[.75rem] !leading-[1.35] font-bold [word-spacing:0.1rem] tracking-[0.02rem] uppercase text-[#aab0bc] !text-center !mb-8">Onze referenties</h2>
 <div class="xl:!px-5 lg:!px-5 !mb-[4.5rem] xl:!mb-[9rem] lg:!mb-[9rem] md:!mb-[9rem]">
     <div class="flex flex-wrap mx-0 md:mx-[-20px] lg:mx-[-20px] xl:mx-[-35px] mt-[-40px] items-center">
+        {% for reference in references %}
         <div class="w-4/12 xl:w-2/12 lg:w-2/12 md:w-2/12 flex-[0_0_auto] xl:px-[35px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ 'assets/images/c1.png'|theme}}" alt="image"></figure>
+            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ reference.image.path|resize(300) }}" alt="image"></figure>
         </div>
-        <!--/column -->
-        <div class="w-4/12 xl:w-2/12 lg:w-2/12 md:w-2/12 flex-[0_0_auto] xl:px-[35px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ 'assets/images/c2.png'|theme}}" alt="image"></figure>
-        </div>
-        <!--/column -->
-        <div class="w-4/12 xl:w-2/12 lg:w-2/12 md:w-2/12 flex-[0_0_auto] xl:px-[35px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ 'assets/images/c3.png'|theme}}" alt="image"></figure>
-        </div>
-        <!--/column -->
-        <div class="w-4/12 xl:w-2/12 lg:w-2/12 md:w-2/12 flex-[0_0_auto] xl:px-[35px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ 'assets/images/c4.png'|theme}}" alt="image"></figure>
-        </div>
-        <!--/column -->
-        <div class="w-4/12 xl:w-2/12 lg:w-2/12 md:w-2/12 flex-[0_0_auto] xl:px-[35px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ 'assets/images/c5.png'|theme}}" alt="image"></figure>
-        </div>
-        <!--/column -->
-        <div class="w-4/12 xl:w-2/12 lg:w-2/12 md:w-2/12 flex-[0_0_auto] xl:px-[35px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <figure class="px-5 md:!px-0 lg:!px-2 xl:!px-3 xxl:!px-4"><img src="{{ 'assets/images/c6.png'|theme}}" alt="image"></figure>
-        </div>
-        <!--/column -->
+        {% endfor %}
     </div>
-    <!--/.row -->
 </div>
+{% endif %}
