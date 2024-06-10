@@ -1236,6 +1236,10 @@ video {
   background-color: inherit;
 }
 
+.bg-transparent {
+  background-color: transparent;
+}
+
 .bg-clip-padding {
   background-clip: padding-box;
 }
