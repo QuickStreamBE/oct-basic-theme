@@ -1,0 +1,46 @@
+<div class="flex justify-between ...">
+    <div class="order-last">01</div>
+    <div>02</div>
+    <div>03</div>
+</div>
+<div class="flex flex-wrap mx-[-15px] xl:mx-[-35px] lg:mx-[-20px] mt-[-50px] !mb-[4.5rem] xl:!mb-[8rem] lg:!mb-[8rem] md:!mb-[8rem] items-center">
+    <div class="md:w-8/12 lg:w-6/12 xl:w-6/12 w-full flex-[0_0_auto] px-[15px] xl:px-[35px] lg:px-[20px] mt-[50px] max-w-full !relative">
+        <div class="shape !bg-[#eff7fa] !rounded-[50%] rellax !w-[10rem] !h-[10rem] !absolute z-[1]" data-rellax-speed="1" style="top: -2rem; left: -1.9rem;"></div>
+        <figure class="rounded-[0.4rem] relative z-[2]"><img class="rounded-[0.4rem]" src="{{ 'assets/images/restaurant.jpg'|theme }}" alt="image"></figure>
+    </div>
+    <!--/column -->
+    <div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] xl:px-[35px] lg:px-[20px] px-[15px] max-w-full mt-[50px]">
+        <h2 class="xl:text-[2rem] text-[calc(1.325rem_+_0.9vw)] !leading-[1.2] !tracking-normal !mb-3 [word-spacing:normal!important]">{{section.title}}</h2>
+        <p class="!mb-6">
+            {{section.summary_text|raw}}
+        </p>
+        <div class="flex flex-wrap mx-[-15px] xl:mx-[-25px] mt-[-30px]">
+            <div class="order-last xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] xl:px-[25px] px-[15px] max-w-full mt-[30px]">
+                <div class="flex flex-row">
+                    <div>
+                        <img src="{{'assets/images/award-2.svg'|theme }}" class="svg-inject icon-svg !w-[2.2rem] !h-[2.2rem]  !mr-4" alt="image">
+                    </div>
+                    <div>
+                        <h4 class="!mb-1">Ervaren</h4>
+                        <p class="!mb-0">Gebouwd door horeca-experts voor u.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/column -->
+            <div class="xl:w-6/12 lg:w-6/12 md:w-6/12 w-full flex-[0_0_auto] xl:px-[25px] px-[15px] max-w-full mt-[30px]">
+                <div class="flex flex-row">
+                    <div>
+                        <img src="{{ 'assets/images/target.svg'|theme }}" class="svg-inject icon-svg !w-[2.2rem] !h-[2.2rem]  !mr-4" alt="image">
+                    </div>
+                    <div>
+                        <h4 class="!mb-1">Doeltreffend</h4>
+                        <p class="!mb-0">Vergroot uw efficiëntie direct.</p>
+                    </div>
+                </div>
+            </div>
+            <!--/column -->
+        </div>
+        <!--/.row -->
+    </div>
+    <!--/column -->
+</div>
