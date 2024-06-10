@@ -1,3 +1,6 @@
+[collection categories]
+handle = "Category"
+==
 <div class="container">
     <div class="flex flex-wrap mx-[-15px]">
         <div class="lg:w-9/12 xl:w-8/12 xxl:w-7/12 w-full flex-[0_0_auto] px-[15px] max-w-full">
@@ -11,42 +14,16 @@
     <!-- /.row -->
     <div
         class="flex flex-wrap mx-[-15px] xl:mx-[-20px] lg:mx-[-20px] md:mx-[-20px] mt-[-40px] !mb-[4.5rem] xl:!mb-[8rem] lg:!mb-[8rem] md:!mb-[8rem]">
+        {% for category in categories %}
         <div
             class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] px-[15px] xl:px-[20px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
             <div class="icon btn btn-block btn-lg btn-soft-aqua pointer-events-none !mb-6"> <i
                 class="uil uil-shield-exclamation before:content-['\ecb3']"></i> </div>
-            <h4 class="!text-[1rem] !leading-[1.45]">Inventarisbeheer</h4>
-            <p class="!mb-3">Optimaliseer voorraadniveaus en stroomlijn uw beheerprocessen.</p>
-            <a href="#" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">Lees meer</a>
+            <h4 class="!text-[1rem] !leading-[1.45]">{{category.title}}</h4>
+            <p class="!mb-3">{{category.summary_text}}</p>
+            <a href="{{'category-item'|page({slug: category.slug})}}" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">Lees meer</a>
         </div>
-        <!--/column -->
-        <div
-            class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] px-[15px] xl:px-[20px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <div class="icon btn btn-block btn-lg btn-soft-aqua pointer-events-none !mb-6"> <i
-                class="uil uil-shield-exclamation before:content-['\ecb3']"></i> </div>
-            <h4 class="!text-[1rem] !leading-[1.45]">Bestellingen</h4>
-            <p class="!mb-3">Efficiënt bestelproces voor een naadloze ervaring.</p>
-            <a href="#" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">Lees meer</a>
-        </div>
-        <!--/column -->
-        <div
-            class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] px-[15px] xl:px-[20px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <div class="icon btn btn-block btn-lg btn-soft-aqua pointer-events-none !mb-6"> <i
-                class="uil uil-laptop-cloud before:content-['\ebb2']"></i> </div>
-            <h4 class="!text-[1rem] !leading-[1.45]">Foodcost</h4>
-            <p class="!mb-3">Nauwkeurige berekening voor maximale winstgevendheid.</p>
-            <a href="#" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">Lees meer</a>
-        </div>
-        <!--/column -->
-        <div
-            class="md:w-6/12 lg:w-3/12 xl:w-3/12 w-full flex-[0_0_auto] px-[15px] xl:px-[20px] lg:px-[20px] md:px-[20px] mt-[40px] max-w-full">
-            <div class="icon btn btn-block btn-lg btn-soft-aqua pointer-events-none !mb-6"> <i
-                class="uil uil-phone-volume before:content-['\ec50']"></i> </div>
-            <h4 class="!text-[1rem] !leading-[1.45]">HACCP</h4>
-            <p class="!mb-3">Voldoe aan voedselveiligheidsnormen met gemak.</p>
-            <a href="#" class="more hover text-[#54a8c7] focus:text-[#54a8c7] hover:text-[#54a8c7]">Lees meer</a>
-        </div>
-        <!--/column -->
+        {% endfor %}
     </div>
     <!--/.row -->
 </div>
