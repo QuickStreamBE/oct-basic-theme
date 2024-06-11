@@ -23483,6 +23483,16 @@ blockquote.video-wrapper .video-content.icon-top:before {
     padding-right: 35px;
   }
 
+  .xl\:\!py-32 {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+  }
+
+  .xl\:\!py-28 {
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+  }
+
   .xl\:pb-40 {
     padding-bottom: 10rem;
   }
