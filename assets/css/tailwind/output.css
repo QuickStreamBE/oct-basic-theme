@@ -23320,6 +23320,10 @@ blockquote.video-wrapper .video-content.icon-top:before {
     flex-direction: row;
   }
 
+  .lg\:flex-col {
+    flex-direction: column;
+  }
+
   .lg\:\!justify-start {
     justify-content: flex-start !important;
   }
